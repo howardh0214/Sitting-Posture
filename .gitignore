@@ -2,7 +2,7 @@ data/dataset/
 data/test/
 data/testing_set/
 training_checkpoint/
-openpose_example/
 logs/
 models/
 pjavenv/
+openpose_example/
