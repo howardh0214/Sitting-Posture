@@ -70,7 +70,11 @@ try:
 
     # Flags
     parser = argparse.ArgumentParser()
-    parser.add_argument("--image_dir", default="data/test", help="Process a directory of images. Read all standard formats (jpg, png, bmp, etc.).")
+
+    """
+    EDIT PATH TO PICTURES
+    """
+    parser.add_argument("--image_dir", default="data/testing_set/0", help="Process a directory of images. Read all standard formats (jpg, png, bmp, etc.).")
     parser.add_argument("--no_display", default=False, help="Enable to disable the visual display.")
     args = parser.parse_known_args()
 

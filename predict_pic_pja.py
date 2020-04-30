@@ -7,8 +7,8 @@ import argparse
 import time
 import numpy as np
 
-for info in os.listdir('testing_set/0'):
-    image_path = os.path.join('testing_set/0', info)
+for info in os.listdir('data/testing_set/0'):
+    image_path = os.path.join('data/testing_set/0', info)
     pic = cv2.imread(image_path)
     pic = cv2.resize(pic, (320, 240), interpolation=cv2.INTER_CUBIC)
     cv2.imwrite(image_path, pic)
@@ -33,7 +33,7 @@ except ImportError as e:
 
 # Flags
 parser = argparse.ArgumentParser()
-parser.add_argument("--image_dir", default="testing_set/0", help="Process a directory of images. Read all standard formats (jpg, png, bmp, etc.).")
+parser.add_argument("--image_dir", default="data/testing_set/0", help="Process a directory of images. Read all standard formats (jpg, png, bmp, etc.).")
 parser.add_argument("--no_display", default=False, help="Enable to disable the visual display.")
 args = parser.parse_known_args()
 
