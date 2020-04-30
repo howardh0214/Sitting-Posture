@@ -1,0 +1,7 @@
+data/dataset/
+data/test/
+data/testing_set/
+training_checkpoint/
+logs/
+models/
+pjavenv/
