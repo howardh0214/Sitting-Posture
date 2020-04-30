@@ -94,9 +94,6 @@ try:
             key = curr_item.replace('-','')
             if key not in params: params[key] = next_item
 
-    # Construct it from system arguments
-    # op.init_argv(args[1])
-    # oppython = op.OpenposePython()
 
     # Starting OpenPose
     opWrapper = op.WrapperPython()
