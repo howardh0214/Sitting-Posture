@@ -5,7 +5,7 @@ from keras import layers
 from keras import optimizers
 import tensorflow as tf
 
-dataset = loadtxt('data.csv', delimiter=',')
+dataset = loadtxt('data/data.csv', delimiter=',')
 # split into input (X) and output (y) variables
 x = dataset[:, 0:32]
 y = dataset[:, 32]

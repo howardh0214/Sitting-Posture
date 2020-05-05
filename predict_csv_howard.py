@@ -16,19 +16,10 @@ model = tf.keras.models.load_model('model_howard.h5')
 model.summary()
 
 raw_df = pd.read_csv("data/output_testing.csv")
-raw_df.head()
-raw_df.drop(columns=['x19', 'y19', 'x20', 'y20', 'x21', 'y21', 'x22', 'y22', 'x23', 'y23', 'x24', 'y24', 'x25', 'y25'])
 new_df = pd.read_csv("data/output_testing.csv")
-new_df.drop(columns=['x19', 'y19', 'x20', 'y20', 'x21', 'y21', 'x22', 'y22', 'x23', 'y23', 'x24', 'y24', 'x25', 'y25'])
 
 test_labels = np.array(raw_df.pop('yn'))
 test_features = np.array(raw_df)
-
-print(type(test_features))
-
-scaler = StandardScaler()
-test_features = scaler.fit_transform(test_features)
-test_features = np.clip(test_features, -5, 5)
 
 predictions = model.predict_classes(test_features)
 predict = list(predictions)

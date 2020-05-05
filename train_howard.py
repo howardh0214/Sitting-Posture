@@ -21,7 +21,6 @@ import datetime
 
 raw_df = pd.read_csv("data/output_training.csv")
 raw_df.head()
-raw_df = raw_df.drop(columns=['x19', 'y19', 'x20', 'y20', 'x21', 'y21', 'x22', 'y22', 'x23', 'y23', 'x24', 'y24', 'x25', 'y25'])
 
 
 #raw_df = raw_df.replace(0, np.NaN)
@@ -33,7 +32,6 @@ train_df, val_df = train_test_split(train_df, test_size=0.2)
 
 # Form np arrays of labels and features.
 train_labels = np.array(train_df.pop('yn'))
-bool_train_labels = train_labels != 0
 val_labels = np.array(val_df.pop('yn'))
 test_labels = np.array(test_df.pop('yn'))
 
