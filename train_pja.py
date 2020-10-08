@@ -34,6 +34,10 @@ early_stopping = tf.keras.callbacks.EarlyStopping(
 model = models.Sequential()
 model.add(layers.Dense(64, input_dim=32, activation='relu'))
 model.add(layers.Dense(32, activation='relu'))
+model.add(layers.Dropout(0.5))
+model.add(layers.Dense(64, input_dim=32, activation='relu'))
+model.add(layers.Dense(32, activation='relu'))
+model.add(layers.Dropout(0.5))
 model.add(layers.Dense(1, activation='sigmoid'))
 print(model.summary())
 
